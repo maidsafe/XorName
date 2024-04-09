@@ -204,7 +204,7 @@ impl XorName {
 
     /// Returns the length of the common prefix with the `other` name; e. g.
     /// the when `other = 11110000` and `self = 11111111` this is 4.
-    fn common_prefix(&self, other: &Self) -> usize {
+    pub fn common_prefix(&self, other: &Self) -> usize {
         for byte_index in 0..XOR_NAME_LEN {
             if self[byte_index] != other[byte_index] {
                 return (byte_index * 8)
